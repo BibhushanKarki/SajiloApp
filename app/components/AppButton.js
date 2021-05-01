@@ -1,7 +1,6 @@
 import React from 'react'
 import { Text, View, TouchableOpacity, Dimensions } from 'react-native'
 
-
 const width = Dimensions.get('window').width
 
 const AppButton = ({ text, onPress,type = 'filled', bordered = false, size = 'large'  }) => {
