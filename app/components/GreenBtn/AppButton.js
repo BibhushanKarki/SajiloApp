@@ -4,7 +4,7 @@ import { Text, View, TouchableOpacity, Dimensions } from 'react-native'
 
 const width = Dimensions.get('window').width
 
-const GreenBtn = ({ text, onPress,type = 'filled', bordered = false, size = 'large'  }) => {
+const AppButton = ({ text, onPress,type = 'filled', bordered = false, size = 'large'  }) => {
   const large = width / 1.3
   const small = width / 2
   const btnSize = size === 'large' ? large : small
@@ -37,5 +37,5 @@ const GreenBtn = ({ text, onPress,type = 'filled', bordered = false, size = 'lar
   )
 }
 
-export default GreenBtn
+export default AppButton
 
