@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {ImageBackground,View,Image,StyleSheet} from 'react-native'
 import {} from 'react-native'
-import AppButton from './app/components/AppButton';
+import GreenBtn from '../components/GreenBtn';
 
 var splash=require('./assets/images/splash.png')
 var LoginBackground=require('./assets/images/Login.png')
@@ -24,17 +24,17 @@ const Login = () => {
     style={{height:'100%',width:'100%'}}
     >
     </ImageBackground>) : (
-      <ImageBackground source={LoginBackground} style={{height:'100%',width:'100%'}} >
-          <View >
+      <ImageBackground source={LoginBackground} style={{height:'100%',width:'100%'}}>
+          <View style={styles.conatiner} >
             <View style={{height:92,width:126}}>
-              <Image source={logo} style={{height:'100%',width:'100%',resizeMode: 'contain'}}></Image>
+              <Image source={logo}></Image>
             </View>
-            <AppButton
+            <GreenBtn
               text='Log in'
               type='outlined'
               onPress={onPress}
             />
-            <AppButton
+            <GreenBtn
               text='Create Account'
               onPress={onPress}
             />
@@ -48,7 +48,7 @@ const Login = () => {
 export default Login
 const styles = StyleSheet.create({
   container: {
-      flex: 1,
+      flex:1,
       alignItems:'center',
       justifyContent:'center',
 
