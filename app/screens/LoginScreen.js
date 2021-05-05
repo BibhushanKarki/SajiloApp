@@ -1,13 +1,20 @@
 import React from 'react'
-import {View,Text,Button} from 'react-native'
+import {Text,Image} from 'react-native'
+import AppButton from '../components/AppButton';
+import AppInput from '../components/AppInput/AppInput';
+import Center from '../components/Center'
 
+var logo=require('../../assets/images/sajilologo.png');
 const Login = () => {
   return (
-    <View>
-      <Text>I am login email screen</Text>
-      <Button title="Hello"/>
-    </View>
+    <Center>
+      <Image source={logo}></Image>
+      <Text>Lock Icon Here</Text>
+      <AppInput></AppInput>
+      <AppButton text='Next'/>
+    </Center>
   )
 }
 
 export default Login
+

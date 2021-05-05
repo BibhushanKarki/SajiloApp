@@ -28,7 +28,7 @@ const AppButton = ({ text, onPress,type = 'filled', bordered = false, size = 'la
   const border = type === 'outlined' && { borderColor: '#808080', borderWidth: 1 }
 
   return (
-     <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
+     <TouchableOpacity onPress={onPress} activeOpacity={0.7} style={{marginVertical: 20}}>
       <View style={[containerCommonStyle, border]}>
         <Text style={[textCommonStyle]}> {text} </Text>
       </View>

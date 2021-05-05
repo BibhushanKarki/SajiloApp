@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react'
-import {ImageBackground,View,Image,StyleSheet} from 'react-native'
+import {ImageBackground,Image,Text} from 'react-native'
 import AppButton from '../components/AppButton';
 import Login from './LoginScreen';
+import Center from '../components/Center'
 
 var splash=require('../../assets/images/splash.png')
 var LoginBackground=require('../../assets/images/Login.png')
@@ -22,10 +23,8 @@ const Home = ({navigation}) => {
     >
     </ImageBackground>) : (
       <ImageBackground source={LoginBackground} style={{height:'100%',width:'100%'}}>
-          <View style={styles.conatiner} >
-            <View style={{height:92,width:126}}>
-              <Image source={logo}></Image>
-            </View>
+          <Center>
+            <Image style={{height:92,width:126}} source={logo}/>
             <AppButton
               text='Log in'
               type='outlined'
@@ -36,7 +35,8 @@ const Home = ({navigation}) => {
             <AppButton
               text='Create Account'
             />
-        </View>
+            <Text>OR LOGIN WITH</Text>
+        </Center>
       </ImageBackground>
     
   );
@@ -44,14 +44,3 @@ const Home = ({navigation}) => {
 }
 
 export default Home
-const styles = StyleSheet.create({
-  container: {
-      flex:1,
-      alignItems:'center',
-      justifyContent:'center',
-
-  }, 
-  logBtn:{
-    fontSize:30
-  }
-});
