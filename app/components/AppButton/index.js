@@ -1,3 +1,3 @@
-import GreenBtn from './GreenBtn'
+import AppButton from './AppButton'
 
-export default GreenBtn
+export default AppButton

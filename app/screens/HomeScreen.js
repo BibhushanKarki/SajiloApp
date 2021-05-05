@@ -1,22 +1,19 @@
 import React,{useState,useEffect} from 'react'
 import {ImageBackground,View,Image,StyleSheet} from 'react-native'
-import {} from 'react-native'
-import GreenBtn from '../components/GreenBtn';
+import AppButton from '../components/AppButton';
+import Login from './LoginScreen';
 
-var splash=require('./assets/images/splash.png')
-var LoginBackground=require('./assets/images/Login.png')
-var logo=require('./assets/images/sajilologo.png');
+var splash=require('../../assets/images/splash.png')
+var LoginBackground=require('../../assets/images/Login.png')
+var logo=require('../../assets/images/sajilologo.png');
 
-const Login = () => {
+const Home = ({navigation}) => {
   const [show, setShow] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setShow(false);
     }, 1000);
   }, []);
-  const onPress = () => {
-    alert('clicked')
-  }
 
   return show ? 
     (<ImageBackground
@@ -29,14 +26,15 @@ const Login = () => {
             <View style={{height:92,width:126}}>
               <Image source={logo}></Image>
             </View>
-            <GreenBtn
+            <AppButton
               text='Log in'
               type='outlined'
-              onPress={onPress}
+              onPress={()=>{
+                navigation.navigate('Login');
+              }}
             />
-            <GreenBtn
+            <AppButton
               text='Create Account'
-              onPress={onPress}
             />
         </View>
       </ImageBackground>
@@ -45,7 +43,7 @@ const Login = () => {
   
 }
 
-export default Login
+export default Home
 const styles = StyleSheet.create({
   container: {
       flex:1,
