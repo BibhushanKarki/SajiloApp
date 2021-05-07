@@ -1,8 +1,8 @@
 import React from 'react'
-import {Text,Image,Dimensions,StyleSheet,View} from 'react-native'
+import {View,Text,Dimensions,Image,StyleSheet} from 'react-native'
 import AppButton from '../components/AppButton';
-import AppInput from '../components/AppInput/AppInput';
-import PasswordScreen from '../screens/PasswordScreen';
+import AppInput from '../components/AppInput'
+import TermsScreen from '../screens/TermsScreen'
 
 var logo=require('../../assets/images/sajilologo.png');
 var lock=require('../../assets/images/lock.png');
@@ -10,23 +10,21 @@ var lock=require('../../assets/images/lock.png');
 const width = Dimensions.get('window').width
 const emailWidth= width/1.6
 
-const Login = ({navigation}) => {
+const PasswordScreen = ({navigation}) => {
   return (
       <View style={styles.Container}>
         <View>
           <Image source={logo} style={styles.loginlogo}/>
           <Image source={lock} style={styles.lockicon}/>
-          <Text style={styles.inputLabel}>Email</Text>
+          <Text style={styles.inputLabel}>Password</Text>
           <AppInput/>
         </View>
         <AppButton text='Next' onPress={()=>{
-                navigation.navigate('PasswordScreen');
+                navigation.navigate('TermsScreen');
               }}/>
       </View>
   )
 }
-
-export default Login
 
 const styles = StyleSheet.create({
   Container:{
@@ -54,3 +52,6 @@ const styles = StyleSheet.create({
   }
 })
 
+
+
+export default PasswordScreen

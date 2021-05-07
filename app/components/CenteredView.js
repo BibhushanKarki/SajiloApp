@@ -1,16 +1,16 @@
 import React from 'react'
 import { View } from 'react-native'
 
-const Center = () => {
+const CenteredView = ({children}) => {
   return (
     <View
       style={{
         flex:1,
         alignItems:"center",
         justifyContent:"center"
-      }}>
+      }}>{children}
     </View>
   )
 }
 
-export default Center
+export default CenteredView
