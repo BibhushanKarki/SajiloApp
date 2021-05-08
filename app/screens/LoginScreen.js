@@ -32,9 +32,10 @@ const styles = StyleSheet.create({
   Container:{
     display:'flex',
     flex:1,
+    backgroundColor:'#FFFFFF',
     alignItems:'center',
     justifyContent: 'space-between',
-    marginTop:'30%'
+    paddingTop:'30%'
   },
   loginlogo:{
     width:69,height:94,resizeMode:'contain',alignSelf:'center'

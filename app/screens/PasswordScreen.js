@@ -18,6 +18,7 @@ const PasswordScreen = ({navigation}) => {
           <Image source={lock} style={styles.lockicon}/>
           <Text style={styles.inputLabel}>Password</Text>
           <AppInput/>
+          <Text style={styles.forgotPass}>Forgot Password</Text>
         </View>
         <AppButton text='Next' onPress={()=>{
                 navigation.navigate('TermsScreen');
@@ -30,9 +31,11 @@ const styles = StyleSheet.create({
   Container:{
     display:'flex',
     flex:1,
+    backgroundColor:'#FFFFFF',
     alignItems:'center',
     justifyContent: 'space-between',
-    marginTop:'30%'
+    paddingTop:'30%',
+
   },
   loginlogo:{
     width:69,height:94,resizeMode:'contain',alignSelf:'center'
@@ -49,6 +52,11 @@ const styles = StyleSheet.create({
     alignSelf:'center',
     width:emailWidth,
     color:'#AFAFAF'
+  },
+  forgotPass:{
+    alignSelf:'center',
+    color:'#26B1B1',
+    marginVertical:10
   }
 })
 

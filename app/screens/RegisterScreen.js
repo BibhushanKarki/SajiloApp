@@ -1,7 +1,7 @@
 import React from 'react'
-import {ImageBackground,Image,Text,StyleSheet,View, TouchableOpacity} from 'react-native'
+import {ImageBackground,Image,Dimensions,StyleSheet,View} from 'react-native'
 import AppInput from '../components/AppInput'
-import { Button } from 'react-native-elements';
+import { Button,Card } from 'react-native-elements';
 
 var LoginBackground=require('../../assets/images/bgscreen.png')
 var logo=require('../../assets/images/sajilologo.png');
@@ -9,18 +9,18 @@ var lock=require('../../assets/images/lock.png');
 
 const RegisterScreen = () => {
   return (
-    <ImageBackground source={LoginBackground} style={{height:'100%',width:'100%'}}>
+    <ImageBackground source={LoginBackground} style={styles.backgroundImage}>
        <View style={styles.Container}>
         <View>
           <Image source={logo} style={styles.loginlogo}/>
           <Image source={lock} style={styles.lockicon}/>
-            <View style={styles.signupForm}>
-            <AppInput value='Phone Number'/>
-            <AppInput/>
-            <AppInput/>
-            </View>
+            <Card containerStyle={{borderRadius:20,marginVertical:5,display: 'flex',width:(Dimensions.get('window').width/1.2)}}>
+            <AppInput placeholder="Phone Number"/>
+            <AppInput placeholder="Enter Password"/>
+            <AppInput placeholder="Confirm Password"/>
+            </Card>
             <Button title="Sign Up"  buttonStyle={{
-            backgroundColor: "#26B1B1",width:100,alignSelf: "center"
+            backgroundColor: "#26B1B1",width:100,alignSelf: "center",marginVertical:10
           }}/>
         </View>
       </View>
@@ -31,6 +31,14 @@ const RegisterScreen = () => {
 export default RegisterScreen
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    height:'100%',width:'100%',
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+  },
   Container:{
     display:'flex',
     flex:1,
@@ -48,16 +56,4 @@ const styles = StyleSheet.create({
     marginVertical:10,
     alignSelf:'center'
   },
-  signupForm:{
-    marginVertical:5,
-    shadowColor: "#000",
-  shadowOffset: {
-    width: 0,
-    height: 1,
-  },
-  shadowOpacity: 0.20,
-  shadowRadius: 1.41,
-
-  elevation: 2,
-    }
 })
