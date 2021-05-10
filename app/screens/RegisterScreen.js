@@ -7,7 +7,7 @@ var LoginBackground=require('../../assets/images/bgscreen.png')
 var logo=require('../../assets/images/sajilologo.png');
 var lock=require('../../assets/images/lock.png');
 
-const RegisterScreen = () => {
+const RegisterScreen = ({navigation}) => {
   return (
     <ImageBackground source={LoginBackground} style={styles.backgroundImage}>
        <View style={styles.Container}>
@@ -20,8 +20,11 @@ const RegisterScreen = () => {
             <AppInput placeholder="Confirm Password"/>
             </Card>
             <Button title="Sign Up"  buttonStyle={{
-            backgroundColor: "#26B1B1",width:100,alignSelf: "center",marginVertical:10
-          }}/>
+            backgroundColor: "#26B1B1",width:100,alignSelf: "center",marginVertical:10}}
+            onPress={()=>{
+              navigation.navigate('TermsScreen')
+            }}
+          />
         </View>
       </View>
     </ImageBackground>

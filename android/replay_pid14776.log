@@ -1,0 +1,37 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 209 ciObject found
+ciMethod java/lang/Object <init> ()V 4097 1 767400 0 0
+ciMethod java/lang/Object getClass ()Ljava/lang/Class; 2049 1 256 0 -1
+ciMethod java/lang/String <init> ([CII)V 2849 1 5536 0 -1
+ciMethod java/lang/String length ()I 3073 1 270595 0 -1
+ciMethod java/lang/System arraycopy (Ljava/lang/Object;ILjava/lang/Object;II)V 5121 1 640 0 -1
+ciMethod java/lang/AbstractStringBuilder <init> (I)V 1425 1 85889 0 -1
+ciMethod java/lang/AbstractStringBuilder append (Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; 2105 1 5383 0 -1
+ciMethod java/lang/AbstractStringBuilder append (C)Ljava/lang/AbstractStringBuilder; 4097 1 149446 0 -1
+ciMethod java/lang/StringBuilder <init> ()V 1057 1 58470 0 192
+ciMethod java/lang/StringBuilder <init> (Ljava/lang/String;)V 2049 1 11048 0 0
+ciMethod java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder; 2049 1 162671 0 992
+ciMethod java/lang/StringBuilder append (C)Ljava/lang/StringBuilder; 4097 1 94335 0 864
+ciMethod java/lang/StringBuilder toString ()Ljava/lang/String; 1153 1 67825 0 832
+ciMethod java/lang/Character isWhitespace (C)Z 4097 1 20528 0 -1
+ciMethod java/util/List size ()I 0 0 1 0 -1
+ciMethod java/util/List toArray ([Ljava/lang/Object;)[Ljava/lang/Object; 0 0 1 0 -1
+ciMethod java/util/List add (Ljava/lang/Object;)Z 0 0 1 0 -1
+ciMethod java/util/AbstractList <init> ()V 2081 1 46809 0 0
+ciMethod java/util/AbstractCollection <init> ()V 2201 1 71583 0 0
+ciMethod java/util/ArrayList <init> (I)V 3089 1 6969 0 320
+ciMethod java/util/ArrayList calculateCapacity ([Ljava/lang/Object;I)I 1417 1 26195 0 0
+ciMethod java/util/ArrayList ensureCapacityInternal (I)V 1417 1 26195 0 576
+ciMethod java/util/ArrayList ensureExplicitCapacity (I)V 1417 1 26196 0 0
+ciMethod java/util/ArrayList grow (I)V 393 1 4514 0 0
+ciMethod java/util/ArrayList hugeCapacity (I)I 0 0 1 0 -1
+ciMethod java/util/ArrayList size ()I 1025 1 128 0 0
+ciMethod java/util/ArrayList toArray ([Ljava/lang/Object;)[Ljava/lang/Object; 521 1 5357 0 1248
+ciMethod java/util/ArrayList add (Ljava/lang/Object;)Z 1401 1 24014 0 736
+ciMethod java/lang/Math max (II)I 1025 1 127679 0 -1
+ciMethod java/util/Arrays copyOf ([Ljava/lang/Object;I)[Ljava/lang/Object; 2049 1 10373 0 -1
+ciMethod java/util/Arrays copyOf ([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object; 3081 1 5575 0 -1
+ciMethodData java/lang/Object <init> ()V 2 767400 orig 264 8 77 126 113 0 0 0 0 128 4 7 19 0 0 0 0 32 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77 68 79 32 101 120 116 114 97 32 100 97 116 97 32 108 111 99 107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 65 157 93 0 1 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 3 0 1 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 data 0 oops 0
+ciMethodData java/util/ArrayList add (Ljava/lang/Object;)Z 2 24014 orig 264 8 77 126 113 0 0 0 0 48 32 20 19 0 0 0 0 144 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77 68 79 32 101 120 116 114 97 32 100 97 116 97 32 108 111 99 107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 175 0 0 0 249 232 2 0 1 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 15 0 2 0 0 0 64 0 0 0 255 255 255 255 2 0 7 0 0 0 0 0 data 8 0x70002 0x5d1f 0x1a0104 0x0 0x1805dab0 0xb 0x2676240 0xa oops 2
