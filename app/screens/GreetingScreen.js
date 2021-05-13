@@ -8,7 +8,7 @@ var logo=require('../../assets/images/sajilologo.png');
 var greetings=require('../../assets/images/greetings.png');
 var lines=require('../../assets/images/lines.png');
 
-const GreetingScreen = () => {
+const GreetingScreen = ({navigation}) => {
   return (
     <ImageBackground source={lines} style={{height:'100%',width:'100%'}}>
     <View style={styles.Container}>
@@ -18,10 +18,12 @@ const GreetingScreen = () => {
           <Text h4 style={styles.title}>Congratulation!!</Text>
           <Text style={styles.statement}>Your Vendor Account has been created.</Text>
         </View>
-        <TouchableOpacity onPress={()=>{alert('hey you clicked'); }} activeOpacity={0.7} style={{marginVertical: 10}}>
-          <Button title="Create Shop"  buttonStyle={{
-            backgroundColor: "#FFBE1A"
-          }}/>
+        <TouchableOpacity activeOpacity={0.7} style={{marginVertical: 10}}>
+          <Button title="Create Shop"  buttonStyle={{backgroundColor: "#FFBE1A"}}
+          onPress={()=>{
+            navigation.navigate('CreateProduct');
+          }}
+          />
         </TouchableOpacity>
         </View>
         </ImageBackground>

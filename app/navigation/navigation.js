@@ -47,6 +47,7 @@ const Navigation=()=>{
         <Stack.Screen 
         name="CreateProduct" 
         component={CreateProduct}
+        options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>
