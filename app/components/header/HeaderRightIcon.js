@@ -6,7 +6,7 @@ var adduser=require('../../../assets/images/adduser.png');
 const HeaderRightIcon = () => {
   return (
     <View>
-      <Image source={adduser}/>
+      <Image style={{marginTop:5}} source={adduser}/>
     </View>
   )
 }

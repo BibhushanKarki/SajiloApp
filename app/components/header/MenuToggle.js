@@ -1,13 +1,19 @@
-import React from 'react'
-import {View,Image} from 'react-native'
+import React from 'react';
+import {View, Image} from 'react-native';
+// import { useNavigation } from '@react-navigation/native';
 
-var menuicon=require('../../../assets/images/menu-icon.png');
+var menuicon = require('../../../assets/images/menu-icon.png');
 
-const MenuToggle = () => {
+const MenuToggle = ({navigation}) => {
+  // const navigation = useNavigation();
   return (
     <View>
-      <Image source={menuicon}/>
+      <Image
+        style={{marginTop: 5}}
+        source={menuicon}
+        onPress={() => navigation.toggleDrawer()}
+      />
     </View>
-  )
-}
-export default MenuToggle
+  );
+};
+export default MenuToggle;
