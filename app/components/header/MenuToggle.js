@@ -1,4 +1,5 @@
 import React from 'react';
+import {TouchableOpacity} from 'react-native';
 import {View, Image} from 'react-native';
 // import { useNavigation } from '@react-navigation/native';
 
@@ -8,11 +9,9 @@ const MenuToggle = ({navigation}) => {
   // const navigation = useNavigation();
   return (
     <View>
-      <Image
-        style={{marginTop: 5}}
-        source={menuicon}
-        onPress={() => navigation.toggleDrawer()}
-      />
+      <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+        <Image style={{marginTop: 5}} source={menuicon} />
+      </TouchableOpacity>
     </View>
   );
 };

@@ -6,7 +6,8 @@ import PasswordScreen from '../screens/PasswordScreen';
 import TermsScreen from '../screens/TermsScreen';
 import GreetingScreen from '../screens/GreetingScreen';
 import RegisterScreen from '../screens/RegisterScreen';
-import CreateProduct from '../screens/CreateProduct';
+import CheckOut from '../screens/CheckOut';
+import CreateNewProduct from '../screens/CreateNewProduct';
 
 const Stack = createStackNavigator();
 
@@ -40,9 +41,14 @@ const MainStackNavigator = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="CreateProduct"
-        component={CreateProduct}
+        name="CheckOut"
+        component={CheckOut}
         options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="CreateNewProduct"
+        component={CreateNewProduct}
+        options={{headerShown: true}}
       />
     </Stack.Navigator>
   );
