@@ -36,7 +36,7 @@ export function DrawerContent({props, navigation}) {
           <Drawer.Section style={styles.drawerSection}>
             <DrawerItem
               icon={({color, size}) => (
-                <Icon name="home-outline" color={color} size={size} />
+                <Icon name="home" color={color} size={size} />
               )}
               label="Checkout"
               onPress={() => {
@@ -45,11 +45,56 @@ export function DrawerContent({props, navigation}) {
             />
             <DrawerItem
               icon={({color, size}) => (
+                <Icon name="products-outline" color={color} size={size} />
+              )}
+              label="Products"
+              onPress={() => {
+                navigation.navigate('ProductsScreen');
+              }}
+            />
+            <DrawerItem
+              icon={({color, size}) => (
                 <Icon name="account-outline" color={color} size={size} />
               )}
-              label="Profile"
+              label="OnlineCatalog"
               onPress={() => {
-                navigation.navigate('ProfileScreen');
+                navigation.navigate('OnlineCatalogScreen');
+              }}
+            />
+            <DrawerItem
+              icon={({color, size}) => (
+                <Icon name="settings-outline" color={color} size={size} />
+              )}
+              label="Customers"
+              onPress={() => {
+                navigation.navigate('CustomersScreen');
+              }}
+            />
+            <DrawerItem
+              icon={({color, size}) => (
+                <Icon name="settings-outline" color={color} size={size} />
+              )}
+              label="Transactions"
+              onPress={() => {
+                navigation.navigate('TransactionsScreen');
+              }}
+            />
+            <DrawerItem
+              icon={({color, size}) => (
+                <Icon name="settings-outline" color={color} size={size} />
+              )}
+              label="Analytics"
+              onPress={() => {
+                navigation.navigate('AnalyticsScreen');
+              }}
+            />
+            <DrawerItem
+              icon={({color, size}) => (
+                <Icon name="settings-outline" color={color} size={size} />
+              )}
+              label="Users"
+              onPress={() => {
+                navigation.navigate('UsersScreen');
               }}
             />
             <DrawerItem
@@ -59,6 +104,15 @@ export function DrawerContent({props, navigation}) {
               label="Settings"
               onPress={() => {
                 navigation.navigate('SettingsScreen');
+              }}
+            />
+            <DrawerItem
+              icon={({color, size}) => (
+                <Icon name="settings-outline" color={color} size={size} />
+              )}
+              label="Help"
+              onPress={() => {
+                navigation.navigate('HelpScreen');
               }}
             />
           </Drawer.Section>
